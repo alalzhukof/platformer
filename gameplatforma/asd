@@ -1,0 +1,47 @@
+cmake_minimum_required(VERSION 3.10)
+
+# Название проекта
+project(gameplatformer)
+
+# Установка стандартов C++
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Установка пути к заголовочным файлам SFML
+include_directories(/opt/homebrew/Cellar/sfml/2.6.1/include)
+include_directories(/Users/alekseizhukov/Desktop/gameplatformer/)
+# Добавление исходных файлов
+set(SOURCES source.cpp setmenu.cpp player.cpp setmenu.cpp setsound.cpp)
+
+# Создание исполняемого файла из исходных файлов
+add_executable(main ${SOURCES})
+
+# Установка пути к библиотекам SFML
+link_directories(/opt/homebrew/Cellar/sfml/2.6.1/lib)
+
+# Линковка с библиотеками SFML
+find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
+include_directories(${SFML_INCLUDE_DIRS})
+target_link_libraries(main sfml-system sfml-window sfml-graphics sfml-audio sfml-network)
+
+# Добавляем библиотеку Doctest в проект
+# В этом примере используется встроенный в CMake механизм FetchContent
+include(FetchContent)
+FetchContent_Declare(
+    doctest
+    GIT_REPOSITORY https://github.com/onqtam/doctest.git
+    GIT_TAG        2.4.6 # Укажите актуальную версию Doctest
+)
+FetchContent_MakeAvailable(doctest)
+
+# Добавляем тесты, написанные с использованием Doctest
+# Например, файл с тестами test_main.cpp
+
+include_directories(/Users/alekseizhukov/Desktop/gameplatformer/build/_deps/doctest-src/doctest/doctest.h)
+include_directories(/Users/alekseizhukov/Desktop/gameplatformer/)
+
+add_executable(PlayerTest setsound.cpp Player.cpp test.cpp)
+
+target_link_libraries(PlayerTest sfml-system sfml-window sfml-graphics sfml-audio sfml-network)
+# Команда clean
+set_directory_properties(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES "source.o")

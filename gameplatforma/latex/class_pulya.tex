@@ -1,0 +1,101 @@
+\doxysection{Pulya Class Reference}
+\hypertarget{class_pulya}{}\label{class_pulya}\index{Pulya@{Pulya}}
+
+
+Представляет снаряд с возможностями движения и столкновения.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pulya_aecfada3d7cbd522be3a0fe1fe4134263}{Pulya}} (Texture \&image)
+\begin{DoxyCompactList}\small\item\em Конструктор класса Pula. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pulya_a0946ff99bd45c06f222dc668940bb9a4}{update}} (float time)
+\begin{DoxyCompactList}\small\item\em Обновляет положение и состояние снаряда. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pulya_ad2d7eea8b545f2976ab326cbd72d06ae}{Collision}} (int dir)
+\begin{DoxyCompactList}\small\item\em Обрабатывает обнаружение столкновений и реакцию на них для снаряда. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pulya_a4cd52a246a7b5d7e7a68672d3f99968f}\label{class_pulya_a4cd52a246a7b5d7e7a68672d3f99968f} 
+float {\bfseries dx}
+\begin{DoxyCompactList}\small\item\em Горизонтальная скорость снаряда. \end{DoxyCompactList}\item 
+\Hypertarget{class_pulya_aa9ae6106e1a8b7c041eada82d2753ca5}\label{class_pulya_aa9ae6106e1a8b7c041eada82d2753ca5} 
+float {\bfseries dy}
+\begin{DoxyCompactList}\small\item\em Вертикальная скорость снаряда. \end{DoxyCompactList}\item 
+\Hypertarget{class_pulya_ae204fc8b9c38f613858c9f94c5b0b1f3}\label{class_pulya_ae204fc8b9c38f613858c9f94c5b0b1f3} 
+Float\+Rect {\bfseries rect}
+\begin{DoxyCompactList}\small\item\em Прямоугольник, определяющий положение и размер снаряда. \end{DoxyCompactList}\item 
+\Hypertarget{class_pulya_acfdacf08664b98a28416fb18c323fac5}\label{class_pulya_acfdacf08664b98a28416fb18c323fac5} 
+int {\bfseries go}
+\begin{DoxyCompactList}\small\item\em Переменная состояния, указывающая на статус движения снаряда. \end{DoxyCompactList}\item 
+\Hypertarget{class_pulya_a25f41de12e3989aead62e144edd4961e}\label{class_pulya_a25f41de12e3989aead62e144edd4961e} 
+Sprite {\bfseries sprite}
+\begin{DoxyCompactList}\small\item\em Спрайт, представляющий снаряд для отображения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Представляет снаряд с возможностями движения и столкновения. 
+
+Класс Pula инкапсулирует свойства и поведение снаряда в игре. Он управляет положением, движением и обнаружением столкновений снаряда. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pulya_aecfada3d7cbd522be3a0fe1fe4134263}\index{Pulya@{Pulya}!Pulya@{Pulya}}
+\index{Pulya@{Pulya}!Pulya@{Pulya}}
+\doxysubsubsection{\texorpdfstring{Pulya()}{Pulya()}}
+{\footnotesize\ttfamily \label{class_pulya_aecfada3d7cbd522be3a0fe1fe4134263} 
+Pulya\+::\+Pulya (\begin{DoxyParamCaption}\item[{Texture \&}]{image}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор класса Pula. 
+
+Инициализирует объект Pula с заданной текстурой, устанавливая начальные скорости в 0 и go в 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Ссылка на текстуру, которая будет использоваться для спрайта снаряда. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pulya_ad2d7eea8b545f2976ab326cbd72d06ae}\index{Pulya@{Pulya}!Collision@{Collision}}
+\index{Collision@{Collision}!Pulya@{Pulya}}
+\doxysubsubsection{\texorpdfstring{Collision()}{Collision()}}
+{\footnotesize\ttfamily \label{class_pulya_ad2d7eea8b545f2976ab326cbd72d06ae} 
+void Pulya\+::\+Collision (\begin{DoxyParamCaption}\item[{int}]{dir}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обрабатывает обнаружение столкновений и реакцию на них для снаряда. 
+
+Проверяет столкновения с определенными типами тайлов в карте тайлов и соответственно обновляет состояние снаряда.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Направление проверки столкновений (0 для горизонтальных, 1 для вертикальных). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pulya_a0946ff99bd45c06f222dc668940bb9a4}\index{Pulya@{Pulya}!update@{update}}
+\index{update@{update}!Pulya@{Pulya}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_pulya_a0946ff99bd45c06f222dc668940bb9a4} 
+void Pulya\+::update (\begin{DoxyParamCaption}\item[{float}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обновляет положение и состояние снаряда. 
+
+Обновляет положение снаряда на основе его скорости и прошедшего времени. Также обрабатывает обнаружение столкновений.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Прошедшее время с момента последнего обновления. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source.\+cpp\end{DoxyCompactItemize}

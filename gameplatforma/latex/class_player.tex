@@ -1,0 +1,118 @@
+\doxysection{Player Class Reference}
+\hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
+
+
+Класс, представляющий игрока.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_ae11578246e08b9e549d1bf6ed26f795f}{Player}} (Texture \&image)
+\begin{DoxyCompactList}\small\item\em Конструктор игрока. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a194b7082791d882887071d8d2893c5e4}{update}} (float time)
+\begin{DoxyCompactList}\small\item\em Обновляет состояние объекта. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a19d401f5bfae3c9356824548651b7f39}{Collision}} (int dir)
+\begin{DoxyCompactList}\small\item\em Обрабатывает столкновения объекта с игровыми тайлами. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_a52250846ba4e8545f3083cf338ea96ff}\label{class_player_a52250846ba4e8545f3083cf338ea96ff} 
+float {\bfseries dx}
+\item 
+\Hypertarget{class_player_a4ae67f5a41deee73002718c3f8d0594d}\label{class_player_a4ae67f5a41deee73002718c3f8d0594d} 
+float {\bfseries dy}
+\begin{DoxyCompactList}\small\item\em Скорость игрока по осям X и Y. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_ae1943c9087c26331c902831b42234436}\label{class_player_ae1943c9087c26331c902831b42234436} 
+Float\+Rect {\bfseries rect}
+\begin{DoxyCompactList}\small\item\em Прямоугольник, представляющий границы игрока \end{DoxyCompactList}\item 
+\Hypertarget{class_player_a12c8bb2a50785eeb6ce4cc3fdafe0c63}\label{class_player_a12c8bb2a50785eeb6ce4cc3fdafe0c63} 
+bool {\bfseries on\+Ground}
+\item 
+\Hypertarget{class_player_a2c362fba5118fdd28a580d47501a7fb6}\label{class_player_a2c362fba5118fdd28a580d47501a7fb6} 
+bool {\bfseries rig}
+\begin{DoxyCompactList}\small\item\em Флаги состояния\+: на земле и направлен вправо \end{DoxyCompactList}\item 
+\Hypertarget{class_player_adc1bfc51842ce4d81969f6941bbe44a2}\label{class_player_adc1bfc51842ce4d81969f6941bbe44a2} 
+Sprite {\bfseries sprite}
+\begin{DoxyCompactList}\small\item\em Спрайт игрока \end{DoxyCompactList}\item 
+\Hypertarget{class_player_af55176d8407f2170fec0eadf1cecc3d5}\label{class_player_af55176d8407f2170fec0eadf1cecc3d5} 
+float {\bfseries cur\+Frame}
+\begin{DoxyCompactList}\small\item\em Текущий кадр анимации \end{DoxyCompactList}\item 
+\Hypertarget{class_player_a36e3b20649be323164c1cc87778a1dae}\label{class_player_a36e3b20649be323164c1cc87778a1dae} 
+int {\bfseries l}
+\begin{DoxyCompactList}\small\item\em Количество жизней игрока \end{DoxyCompactList}\item 
+\Hypertarget{class_player_ab4848a7e541fd677a5ee94fa98d79989}\label{class_player_ab4848a7e541fd677a5ee94fa98d79989} 
+bool {\bfseries life}
+\begin{DoxyCompactList}\small\item\em Флаг состояния жизни игрока \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий игрока. 
+
+Этот класс содержит всю информацию и методы, необходимые для управления игроком в игре. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_player_ae11578246e08b9e549d1bf6ed26f795f}\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily \label{class_player_ae11578246e08b9e549d1bf6ed26f795f} 
+Player\+::\+Player (\begin{DoxyParamCaption}\item[{Texture \&}]{image}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор игрока. 
+
+Инициализирует объект игрока, устанавливая начальные параметры и текстуру.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Текстура для спрайта игрока. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_a19d401f5bfae3c9356824548651b7f39}\index{Player@{Player}!Collision@{Collision}}
+\index{Collision@{Collision}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Collision()}{Collision()}}
+{\footnotesize\ttfamily \label{class_player_a19d401f5bfae3c9356824548651b7f39} 
+void Player\+::\+Collision (\begin{DoxyParamCaption}\item[{int}]{dir}{}\end{DoxyParamCaption})}
+
+
+
+Обрабатывает столкновения объекта с игровыми тайлами. 
+
+Эта функция проверяет столкновения объекта с различными тайлами на карте и соответствующим образом обновляет его положение и состояние.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Направление проверки столкновений (0 для горизонтальных, 1 для вертикальных). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a194b7082791d882887071d8d2893c5e4}\index{Player@{Player}!update@{update}}
+\index{update@{update}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_player_a194b7082791d882887071d8d2893c5e4} 
+void Player\+::update (\begin{DoxyParamCaption}\item[{float}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Обновляет состояние объекта. 
+
+Эта функция обновляет положение и состояние объекта на основе прошедшего времени. Обрабатывает движение, гравитацию, столкновения, анимацию и состояние жизни объекта.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Прошедшее время с момента последнего обновления. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Player.\+hpp\item 
+player.\+cpp\end{DoxyCompactItemize}

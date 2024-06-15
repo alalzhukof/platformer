@@ -1,0 +1,28 @@
+\doxysection{Player.\+hpp}
+\hypertarget{_player_8hpp_source}{}\label{_player_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ PLAYER\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ PLAYER\_HPP}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ namespace\ }sf;}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ dx,\ \mbox{\hyperlink{class_player_a4ae67f5a41deee73002718c3f8d0594d}{dy}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ FloatRect\ \mbox{\hyperlink{class_player_ae1943c9087c26331c902831b42234436}{rect}};\ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ onGround,\ \mbox{\hyperlink{class_player_a2c362fba5118fdd28a580d47501a7fb6}{rig}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ Sprite\ \mbox{\hyperlink{class_player_adc1bfc51842ce4d81969f6941bbe44a2}{sprite}};\ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_player_af55176d8407f2170fec0eadf1cecc3d5}{curFrame}};\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_a36e3b20649be323164c1cc87778a1dae}{l}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_player_ab4848a7e541fd677a5ee94fa98d79989}{life}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_player_ae11578246e08b9e549d1bf6ed26f795f}{Player}}(Texture\ \&image);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a194b7082791d882887071d8d2893c5e4}{update}}(\textcolor{keywordtype}{float}\ time);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a19d401f5bfae3c9356824548651b7f39}{Collision}}(\textcolor{keywordtype}{int}\ dir);}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

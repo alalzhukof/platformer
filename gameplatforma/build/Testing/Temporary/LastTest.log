@@ -1,0 +1,51 @@
+Start testing: Jun 15 14:21 MSK
+----------------------------------------------------------
+1/2 Testing: PlayerTest
+1/2 Test: PlayerTest
+Command: "/Users/alekseizhukov/Desktop/gameplatforma/build/PlayerTest"
+Directory: /Users/alekseizhukov/Desktop/gameplatforma/build
+"PlayerTest" start time: Jun 15 14:21 MSK
+Output:
+----------------------------------------------------------
+AL lib: (EE) FillCPUCaps: Failed to open /proc/cpuinfo, cannot check for NEON support
+Failed to open sound file "build/Sound/shooting.ogg" (couldn't open stream)
+Failed to open sound file "build/Sound/dieenemy.ogg" (couldn't open stream)
+Failed to open sound file "build/Sound/smert.ogg" (couldn't open stream)
+Failed to open sound file "build/Sound/med.ogg" (couldn't open stream)
+Failed to open sound file "build/Sound/Play.ogg" (couldn't open stream)
+[doctest] doctest version is "2.4.6"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases: 1 | 1 passed | 0 failed | 0 skipped
+[doctest] assertions: 2 | 2 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Passed.
+"PlayerTest" end time: Jun 15 14:21 MSK
+"PlayerTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: MenuTest
+2/2 Test: MenuTest
+Command: "/Users/alekseizhukov/Desktop/gameplatforma/build/MenuTest"
+Directory: /Users/alekseizhukov/Desktop/gameplatforma/build
+"MenuTest" start time: Jun 15 14:21 MSK
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.4.6"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:  3 |  3 passed | 0 failed | 0 skipped
+[doctest] assertions: 20 | 20 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MenuTest" end time: Jun 15 14:21 MSK
+"MenuTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 15 14:21 MSK
